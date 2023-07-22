@@ -9,6 +9,44 @@ document.querySelector("#generate").addEventListener(
   var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 
+  function generatePassword() { {
+    var length = parseInt 
+      (prompt ("How many charcters would you like your password to contain?"));
+    };
+    
+    if (length<8) {
+      alert("Password must be at leaset 8 characters long");
+      return null;
+    }
+
+    if (length>128) {
+      alert("Password length cannot be longer than 128 characters");
+      return null;
+    }
+  
+    var includeAlphaLower = confirm(
+      "Click OK to confirm including lower case characters"
+    );
+
+    var includeAlphaUpper = confirm(
+      "Click OK to confirm including upper case characters"
+    );
+
+    var includeSpecialChar = confirm(
+      "Click OK to confirm including special characters"
+    );
+
+    var includeNumber = confirm(
+      "Click OK to confirm including number characters"
+    );
+
+    if (!includeAlphaLower && !includeAlphaUpper && !includeSpecialChar && !includeNumber){
+    alert ("Password must include at least one character type.");
+    }
+  }
+
+
+
   
 
 
